@@ -9,6 +9,7 @@ header {
     text-align: center;
     color: #fff;
     background-color: blue;
+    box-shadow: 3px;
 }
 
 main {
@@ -32,11 +33,13 @@ footer {
 
 }
 
+.map {
+    height: 50svh;
+    width: 50%;
+}
+
 .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
     display: none !important;
 } 
 
-.map {
-    height: 100svh;
-    width: 100%;
-}
+
