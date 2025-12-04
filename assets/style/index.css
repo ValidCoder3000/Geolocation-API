@@ -31,11 +31,12 @@ footer {
     text-align: center;
 
 }
-/* .map {
-    height: 100svh;
-    width: 100%;
-}
 
 .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
     display: none !important;
-} */
+} 
+
+.map {
+    height: 100svh;
+    width: 100%;
+}
