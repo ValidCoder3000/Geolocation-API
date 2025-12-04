@@ -12,8 +12,6 @@ const map = new mapboxgl.Map({
 
 const marker = new mapboxgl.Marker({color: '#ff7342'});
 
-
-// The success callback function
 function getLocation(position) {
     let { altitude, latitude, longitude } = position.coords;
     console.log(`Longitude: ${longitude} | Latitude: ${latitude} | Altitude: ${altitude}`)
@@ -21,7 +19,6 @@ function getLocation(position) {
     marker.setLngLat([longitude, latitude]).addTo(map);
 }
 
-// The 'failure 'callback function
 function errorHandler() {
     console.log('Sorry, Unable to retrieve your location!')
 }
@@ -47,4 +44,3 @@ function displayPosition() {
 }
 
 displayPosition();
-// disabledOptions();
