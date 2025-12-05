@@ -45,15 +45,35 @@ function displayPosition() {
 
 
 const button = document.querySelector('button');
-const paragraph = document.getElementById('disclaimer');
+const paragraph = document.getElementById('disclaimers');
 
-function showDisclaimer() {
-    const space = document.createElement("p");
-    space.classList.add("disclaimer");
-    space.innerHTML = `We know where you are now :D`;
-    paragraph.appendChild(space);
-}
+let visibility = false;
+let activity;
+let watchId;
+
+// function showDisclaimer() {
+//     const space = document.createElement("p");
+//     space.classList.add("disclaimer");
+//     space.innerHTML = `We know where you are now :D`;
+//     paragraph.appendChild(space);
+// }
 
 button.addEventListener('click', () => {
-    displayPosition();
-})
+    if (!visibility) {
+        watchId = displayPosition();
+
+        if (!activity) {
+            activity = document.createElement("p");
+            activity.classList.add("disclaimer");
+            activity.innerHTML = `We know where you are now :D`;
+            paragraph.appendChild(activity);
+        } else {
+            activity.style.display = "block";
+        }
+    } else {
+        if (watchId) navigator.gorlocation.clearWatch(watchId);
+        if (activity) activity.style.display = "none";
+    }
+    
+    visibility = !visibility;
+});
