@@ -1,10 +1,6 @@
 @charset "utf-8";
 @import "./reset.css";
 
-/* body {
-    background-color: rgb(8, 8, 49);
-} */
-
 header {
     text-align: center;
     color: #fff;
@@ -17,6 +13,10 @@ main {
     background-color: rgb(233, 224, 224);
     padding: 10px;
     text-align: center;
+}
+
+.paragraphs {
+    padding-top: 20px;
 }
 
 nav {
@@ -44,7 +44,6 @@ a:hover {
 }
 
 .first_section {
-    /* margin: 100px; */
     height: 500px;
     width:auto;
     color: blue;
@@ -86,7 +85,6 @@ footer {
     background-color: rgb(8, 8, 49);
 
     .footer_container {
-        /* margin-top: 10px; */
         padding: 20px;
     }
 }

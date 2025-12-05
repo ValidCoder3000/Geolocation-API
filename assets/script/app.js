@@ -37,7 +37,7 @@ function disabledOptions() {
 
 function displayPosition() {
     if ('geolocation' in navigator) {
-    navigator.geolocation.watchPosition(getLocation, errorHandler, options);
+    navigator.geolocation.getCurrentPosition(getLocation, errorHandler, options);
 } else {
     console.log('Geolocation is not supported by the browser')
 }
@@ -50,13 +50,6 @@ const paragraph = document.getElementById('disclaimers');
 let visibility = false;
 let activity;
 let watchId;
-
-// function showDisclaimer() {
-//     const space = document.createElement("p");
-//     space.classList.add("disclaimer");
-//     space.innerHTML = `We know where you are now :D`;
-//     paragraph.appendChild(space);
-// }
 
 button.addEventListener('click', () => {
     if (!visibility) {
