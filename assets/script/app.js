@@ -43,4 +43,17 @@ function displayPosition() {
 }
 }
 
-displayPosition();
+
+const button = document.querySelector('button');
+const paragraph = document.getElementById('disclaimer');
+
+function showDisclaimer() {
+    const space = document.createElement("p");
+    space.classList.add("disclaimer");
+    space.innerHTML = `We know where you are now :D`;
+    paragraph.appendChild(space);
+}
+
+button.addEventListener('click', () => {
+    displayPosition();
+})
